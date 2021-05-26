@@ -1,0 +1,99 @@
+<html>
+
+
+<!--Title and Description of the page with link to the css file.-->
+<head>
+    <link rel="stylesheet" href="survey.css">
+    <h1 id="title" class="text-center color-white">Survey Form</h1>
+    <p id="description" class="text-center color-white">Please fill out this form to get in contact with us.</p>
+
+</head>
+
+<!--The survey form html with correct tags for stying with CSS.-->
+<body>
+    <div id="flex-box" class="flex-box">
+        <div id="container" class="container">
+            <form id="survey-form" class="form-styling" method="GET">
+                
+                <!--Name Input-->
+                <div id="name-form" class="form-item"><br>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="name">
+                    <small>Error message</small>
+                </div>
+
+                <!--Email Input-->
+                <div id="email-form" class="form-item">
+                    <input type="email" id="email" name="email" class="form-input" placeholder="email">
+                    <small>Error message</small>
+                </div>
+
+                <!--Number Input-->
+                <div id="number-form" class="form-item">
+                    <input type="tel" id="number" oninput="numberOnly(this.id)" name="number" class="form-input" placeholder="phone number" min="0" max="9" maxlength="11" >
+                    <small>Error message</small>
+                </div>
+
+                <!--Color Dropdown Input-->
+                <div id="dropdown-form" class="form-item">
+                    <select name="color" id="dropdown" class="form-input color-grey">
+                        <option value="" disabled selected hidden>color</option>
+                        <option value="red">red</option>
+                        <option value="purple">purple</option>
+                        <option value="black">black</option>
+                        <option value="green">green</option>
+                    </select>
+                </div>
+
+                <!--Radio Button For Gender Input-->
+                <div id="radio-form" class="form-item radio-flex">
+                    <label id="gender-header" class="form-label"><strong>Gender:</strong></label>
+
+                    <label id=Male-label for="gender" class="form-label2">
+                        <input type="radio" id="radio-button" class="button-scale" name="gender" value="Male"> Male
+                    </label>
+                    
+                    <label id="Female-label" for="gender" class="form-label2">
+                        <input type="radio" id="radio-button" class="button-scale" name="gender" value="Female"> Female
+                    </label>
+                    
+                </div>
+
+                <!--Checkbox Button For Fruit Input-->
+                <div id="checkbox-form" class="form-item radio-flex">
+                    <label class="form-label"><strong>Choose the fruits you like:</strong></label>
+
+                    <label id=checkbox-label for="apple" class="form-label2">
+                        <input type="checkbox" id="apple" value="apple" class="button-scale"> Apple
+                    </label>
+                    
+                    <label id=checkbox-label for="banana" class="form-label2">
+                        <input type="checkbox" id="banana" value="banana" class="button-scale"> Banana
+                    </label>
+                    
+                    <label id=checkbox-label for="pear" class="form-label2">
+                        <input type="checkbox" id="pear" value="pear" class="button-scale"> Pear
+                    </label>
+                    
+                    <label id=checkbox-label for="orange" class="form-label2">
+                        <input type="checkbox" id="orange" value="orange" class="button-scale"> Orange
+                    </label>
+                </div>
+                    
+                <!--Text Area For Additional Comments-->
+                <div id="textarea" class="form-textarea form-item">
+                    <textarea name="textarea" form="survey-form" class="" placeholder="Tell Us More About Yourself"></textarea>
+                </div>
+
+                <!--Submit Button Input-->
+                <div id="button-form" class="button-styling">
+                    <input type="submit" id="submit" value="Submit" class="form-button">
+                </div>
+            </form>
+        
+</div>
+</div>
+                    
+<script type="text/javascript" src="script.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
